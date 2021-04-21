@@ -19,6 +19,8 @@ pokemon.post("/", async (req, res, next) => {
     return res.status(500).json({code: 500, message: "Campos incompletos"})
     });
     
+
+
 pokemon.delete("/:id([0-9]{1,3})", async (req, res, next) => {
 const query = `DELETE FROM pokemon WHERE pok_id=${req.params.id}`;
 
